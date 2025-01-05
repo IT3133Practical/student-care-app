@@ -82,10 +82,7 @@ const styles = StyleSheet.create({
     card: {
         backgroundColor: '#fff',
         borderRadius: 10,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
+        boxShadow: '0px 2px 3px rgba(0, 0, 0, 0.25)', // Updated to use boxShadow
         elevation: 5,
         padding: 15,
         margin: 10,
@@ -128,3 +125,4 @@ const styles = StyleSheet.create({
         marginBottom: 5,
     },
 })
+
