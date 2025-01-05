@@ -28,19 +28,31 @@ export default function BottomTabNavigator({ route }: BottomTabNavigatorProps) {
           let iconSource
 
           if (route.name === 'Profile') {
-            iconSource = require('../../assets/icons/profile.png')
+            try {
+              iconSource = require('../../assets/icons/profile.png')
+            } catch (e) {
+              console.error('Profile icon not found', e)
+            }
           } else if (route.name === 'Courses') {
-            iconSource = require('../../assets/icons/course.png')
+            try {
+              iconSource = require('../../assets/icons/course.png')
+            } catch (e) {
+              console.error('Courses icon not found', e)
+            }
           } else if (route.name === 'Subjects') {
-            iconSource = require('../../assets/icons/subjects.png')
+            try {
+              iconSource = require('../../assets/icons/subjects.png')
+            } catch (e) {
+              console.error('Subjects icon not found', e)
+            }
           }
 
-          return (
+          return iconSource ? (
             <Image
               source={iconSource}
               style={[styles.icon, { tintColor: focused ? '#4b0150' : '#aaa' }]}
             />
-          )
+          ) : null
         },
         tabBarActiveTintColor: '#4b0150',
         tabBarInactiveTintColor: '#aaa',
