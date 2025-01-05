@@ -29,19 +29,19 @@ export default function BottomTabNavigator({ route }: BottomTabNavigatorProps) {
 
           if (route.name === 'Profile') {
             try {
-              iconSource = require('../../assets/icons/profile.png')
+              iconSource = require('../../../assets/icons/profile.png')
             } catch (e) {
               console.error('Profile icon not found', e)
             }
           } else if (route.name === 'Courses') {
             try {
-              iconSource = require('../../assets/icons/course.png')
+              iconSource = require('../../../assets/icons/course.png')
             } catch (e) {
               console.error('Courses icon not found', e)
             }
           } else if (route.name === 'Subjects') {
             try {
-              iconSource = require('../../assets/icons/subjects.png')
+              iconSource = require('../../../assets/icons/subjects.png')
             } catch (e) {
               console.error('Subjects icon not found', e)
             }
